@@ -2,8 +2,6 @@ package com.example.musicapidemo.service;
 
 import com.example.musicapidemo.dto.SpotifyTokenResponse;
 import com.example.musicapidemo.dto.SpotifyTrackItemResponse;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -65,10 +63,8 @@ public class MusicService {
     }
 
     private String getQueryString(String query, int offset) {
-        String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
-
         return "?q="
-            + encodedQuery
+            + query
             + "&offset="
             + offset
             + "&type=track&market=KR&limit=10";
