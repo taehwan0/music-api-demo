@@ -4,3 +4,7 @@ server:
 spring:
   profiles:
     include: hidden
+
+logging:
+  level:
+    org.apache.coyote.http11: debug
