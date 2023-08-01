@@ -2,7 +2,6 @@ package com.example.musicapidemo.service;
 
 import com.example.musicapidemo.dto.SpotifyTokenResponse;
 import com.example.musicapidemo.dto.SpotifyTrackItemResponse;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -11,7 +10,6 @@ import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
 
-@RequiredArgsConstructor
 @Service
 public class MusicService {
 
